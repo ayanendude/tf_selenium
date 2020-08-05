@@ -1,12 +1,10 @@
 node {
     stage ('Checkout') {
-        // git url: 'https://github.com/ayanendude/tf_selenium.git'
         checkout scm
     }
 
     stage ('Terraform init'){
         sh "/usr/local/bin/terraform init"
-        sh "pwd"
     }
 
     stage ('Terraform plan'){
